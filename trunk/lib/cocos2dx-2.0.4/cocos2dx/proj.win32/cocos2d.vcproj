@@ -18,8 +18,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName).win32"
-			IntermediateDirectory="$(ConfigurationName).win32"
+			OutputDirectory="$(SolutionDir)../../bin"
+			IntermediateDirectory="$(SolutionDir)../../bin/$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
 			>
@@ -61,12 +61,12 @@
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
-				CommandLine="if not exist &quot;$(OutDir)&quot; mkdir &quot;$(OutDir)&quot;&#x0D;&#x0A;xcopy /Y /Q &quot;$(SolutionDir)cocos2dx\platform\third_party\win32\libraries\*.*&quot; &quot;$(OutDir)&quot;&#x0D;&#x0A;"
+				CommandLine=""
 			/>
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="opengl32.lib glew32.lib libxml2.lib libzlib.lib libpng.lib libjpeg.lib libtiff.lib libiconv.lib pthreadVCE2.lib"
-				OutputFile="$(OutDir)\$(ProjectName).dll"
+				OutputFile="$(SolutionDir)../../bin/$(ProjectName).dll"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="&quot;$(OutDir)&quot;"
 				IgnoreAllDefaultLibraries="false"
